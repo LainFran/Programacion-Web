@@ -1,5 +1,5 @@
 // 1. Configurar e Inicializar el cliente de Supabase
-const SUPABASE_URL = 'https://eskxlzbqqicxygxffxqg.supabase.co';
+const SUPABASE_URL = 'https://lainfran.github.io/Programacion-Web/';
 const SUPABASE_ANON_KEY = 'sb_publishable_wpCxaVbzMMzHHXfWLeFNFA_bWSoAdDi';
 
 // CORRECCIÓN: Inicialización limpia usando el objeto global de la CDN
