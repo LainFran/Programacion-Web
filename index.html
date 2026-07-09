@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio de Proyectos Web</title>
+    <!-- Fuentes tecnológicas de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Librería de Supabase (debe ir ANTES de app.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<header class="header-cyber">
+    <!-- El contenedor que tendrá la imagen de fondo -->
+    <div class="banner-fondo"></div>
+    
+    <!-- El contenido que flotará encima de la imagen -->
+    <div class="banner-contenido">
+        <div class="linea-decorativa"></div>
+        <h1>Directorio de Proyectos Programacion Web</h1>
+        <p>Asignación de Programación Web - Registro Centralizado</p>
+        
+        <!-- Contador dinámico interactivo -->
+        <div class="contador-cyber">
+            <span class="etiqueta-status">SISTEMA ONLINE</span>
+            <span class="numero-proyectos" id="contador-total">00</span>
+            <span class="subtexto-contador">Terminales Conectadas</span>
+        </div>
+    </div>
+</header>
+
+
+    <main class="contenedor-principal">
+        <!-- Sección del Formulario -->
+        <section class="seccion-registro">
+            <h2>Registra tu Proyecto</h2>
+            <p>Ingresa tus datos para añadir tu sitio web y repositorio al índice de la clase.</p>
+            
+            <form id="formulario-registro">
+                <div class="campo-grupo">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" required placeholder="Ej. Ochoa Ramos Cristian Adrian">
+                </div>
+                
+                <div class="campo-grupo">
+                    <label for="url_web">Enlace de tu Sitio Web:</label>
+                    <input type="url" id="url_web" required placeholder="https://tusitio.com">
+                </div>
+                
+                <div class="campo-grupo">
+                    <label for="url_repo">Enlace del Repositorio:</label>
+                    <input type="url" id="url_repo" required placeholder="Ej. https://github.com">
+                </div>
+                
+                <div class="campo-grupo">
+                    <label for="descripcion">Descripción de tu web:</label>
+                    <textarea id="descripcion" rows="3" placeholder="¿De qué trata tu sitio web? Breve resumen"></textarea>
+                </div>
+                
+                <button type="submit" id="btn-guardar">Registrar mi Proyecto</button>
+            </form>
+        </section>
+
+        <!-- Sección de las Tarjetas -->
+        <section class="seccion-directorio">
+            <h2>Proyectos de la Clase</h2>
+            <div id="contenedor-estudiantes" class="grid-estudiantes">
+                <p class="mensaje-carga">Cargando proyectos desde Supabase...</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Tu script de lógica -->
+    <script src="app.js"></script>
+
+</body>
+</html>
